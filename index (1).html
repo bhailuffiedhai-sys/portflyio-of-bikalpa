@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bikalpa Pandey | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+}
+
+/* Navbar */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:linear-gradient(-45deg,#2563eb,#7c3aed,#06b6d4,#2563eb);
+    background-size:400% 400%;
+    animation:gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.profile{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:white;
+    color:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    font-weight:bold;
+    margin:auto;
+    border:5px solid white;
+}
+
+.hero h1{
+    margin-top:25px;
+    font-size:4rem;
+}
+
+.hero span{
+    color:#facc15;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin:15px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:14px 30px;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+.btn2{
+    background:#facc15;
+    color:black;
+}
+
+/* Sections */
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    color:#38bdf8;
+    margin-bottom:40px;
+}
+
+/* Cards */
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    max-width:900px;
+    margin:auto;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+/* Skills */
+.skill{
+    margin:20px 0;
+}
+
+.skill p{
+    margin-bottom:8px;
+}
+
+.bar{
+    height:12px;
+    background:#1e293b;
+    border-radius:20px;
+}
+
+.bar span{
+    display:block;
+    height:100%;
+    border-radius:20px;
+    background:linear-gradient(to right,#38bdf8,#7c3aed);
+}
+
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.project:hover{
+    transform:translateY(-10px);
+}
+
+.project h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* Contact */
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input,textarea{
+    padding:15px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+}
+
+button{
+    padding:15px;
+    background:#38bdf8;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#2563eb;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:15px;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.profile{
+    width:140px;
+    height:140px;
+    font-size:45px;
+}
+
+.section-title{
+    font-size:2rem;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Bikalpa Pandey</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <div class="profile">BP</div>
+
+        <h1>Hello, I'm <span>Bikalpa Pandey</span></h1>
+
+        <p>Class 10 Student • Web Designer • Future Developer</p>
+
+        <a href="#about" class="btn">About Me</a>
+        <a href="#contact" class="btn btn2">Contact Me</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="card">
+        <h3>Name: Bikalpa Pandey</h3>
+        <h3>Age: 16 Years</h3>
+        <h3>Class: 10</h3>
+        <h3>School: Shree Shanti Namuna Secondary School</h3>
+
+        <br>
+
+        <p>
+            I am a passionate student from Nepal who loves web design,
+            programming, AI tools, and technology. I enjoy creating
+            modern websites and learning new digital skills every day.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="card">
+
+        <div class="skill">
+            <p>HTML - 90%</p>
+            <div class="bar"><span style="width:90%"></span></div>
+        </div>
+
+        <div class="skill">
+            <p>CSS - 85%</p>
+            <div class="bar"><span style="width:85%"></span></div>
+        </div>
+
+        <div class="skill">
+            <p>JavaScript - 75%</p>
+            <div class="bar"><span style="width:75%"></span></div>
+        </div>
+
+        <div class="skill">
+            <p>Python - 80%</p>
+            <div class="bar"><span style="width:80%"></span></div>
+        </div>
+
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>Personal responsive portfolio website.</p>
+        </div>
+
+        <div class="project">
+            <h3>Hospital Management System</h3>
+            <p>Hospital data management software concept.</p>
+        </div>
+
+        <div class="project">
+            <h3>Snake Game</h3>
+            <p>Interactive snake game using JavaScript.</p>
+        </div>
+
+        <div class="project">
+            <h3>Car Racing Game</h3>
+            <p>Simple obstacle racing game project.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="card">
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <h3>Bikalpa Pandey</h3>
+    <p>Class 10 Student | Web Designer | Future Developer</p>
+    <br>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
